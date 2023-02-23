@@ -5,42 +5,42 @@ export const GET = async () => {
 		{
 			id: 1,
 			binda: 'DKI Jakarta',
-			lawfull: 1,
-			geo: 2,
-			cdr: 2,
-			pending: 5
+			lawfull: 'GAM',
+			geo: 'Result',
+			cdr: 'Result',
+			pending: 'Result'
 		},
 		{
 			id: 2,
 			binda: 'Jawa Barat',
-			lawfull: 1,
-			geo: 2,
-			cdr: 2,
-			pending: 5
+			lawfull: 'GAM',
+			geo: 'Result',
+			cdr: 'Result',
+			pending: 'Result'
 		},
 		{
 			id: 3,
 			binda: 'Jawa Tengah',
-			lawfull: 1,
-			geo: 2,
-			cdr: 2,
-			pending: 5
+			lawfull: 'GAM',
+			geo: 'Result',
+			cdr: 'Result',
+			pending: 'Result'
 		},
 		{
 			id: 4,
 			binda: 'Jawa Timur',
-			lawfull: 1,
-			geo: 2,
-			cdr: 2,
-			pending: 5
+			lawfull: 'GAM',
+			geo: 'Result',
+			cdr: 'Result',
+			pending: 'Result'
 		},
 		{
 			id: 5,
 			binda: 'Bali',
-			lawfull: 1,
-			geo: 2,
-			cdr: 2,
-			pending: 5
+			lawfull: 'GAM',
+			geo: 'Result',
+			cdr: 'Result',
+			pending: 'Result'
 		}
 	];
 	return new Response(JSON.stringify(posts), {

@@ -1,10 +1,10 @@
 <script>
-	import GeoChart from '../../../compenents/GeoChart.svelte';
-	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
-	import LineChart from '../../../compenents/LineChart.svelte';
+	import GeoChart from '../../../../../compenents/GeoChart.svelte';
+	import PieChartBinda from '../../../../../compenents/PieChartBinda.svelte';
+	import LineChart from '../../../../../compenents/LineChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
-	import Navbar from '../../../compenents/Navbar.svelte';
+	import Navbar from '../../../../../compenents/Navbar.svelte';
 	import Flatpickr from 'svelte-flatpickr';
 	import 'flatpickr/dist/flatpickr.css';
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
@@ -14,7 +14,7 @@
 	onMount(async () => {
 		new DataTable('#lawfulllist');
 		new DataTable('#geolist');
-		new DataTable('#msisdnList');	
+		new DataTable('#msisdnList');
 	});
 
 	// onMount(async () => {

@@ -1,10 +1,10 @@
 <script>
-	import GeoChart from '../../../compenents/GeoChart.svelte';
-	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
-	import LineChart from '../../../compenents/LineChart.svelte';
+	import GeoChart from '../../../../../compenents/GeoChart.svelte';
+	import PieChartBinda from '../../../../../compenents/PieChartBinda.svelte';
+	import LineChart from '../../../../../compenents/LineChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
-	import Navbar from '../../../compenents/Navbar.svelte';
+	import Navbar from '../../../../../compenents/Navbar.svelte';
 	import Flatpickr from 'svelte-flatpickr';
 	import 'flatpickr/dist/flatpickr.css';
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
@@ -33,6 +33,7 @@
 						<div class="d-flex justify-content-between mb-3">
 							<h6>Request List (Telecomunication)</h6>
 						</div>
+
 						<table id="lawfulllist" class="table table-striped mb-6 mt-6" style="width:100%">
 							<thead>
 								<tr>
@@ -460,7 +461,7 @@
 						/>
 					</div>
 					<div class="modal-body">
-						<div class="row mt-2">
+						<div class="row">
 							<div class="col-md-12">
 								<h6 class="font-weight-bold">Informasi Permintaan</h6>
 							</div>
@@ -645,39 +646,37 @@
 							</div>
 							<div class="col-md-12 d-flex column-gap-3 last-location-container">
 								<div class="last-location">
-									<p>Lokasi Terakhir</p>
-									<div class="msisdn-container">
-										<p>MSISDN : <span>628129129129</span></p>
-										<p>
-											Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus
-											Ibukota Jakarta
-										</p>
-									</div>
+									<p>History Location</p>
+
 									<div class="update-container">
-										<p style="color:#fbfdff">Update MSISDN</p>
 										<table id="" class="table table-striped mb-3 mt-3" style="width:100%">
 											<thead>
 												<tr>
-													<th>No</th>
-													<th>Update</th>
 													<th>Waktu</th>
+													<th>Lokasi</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>1</td>
-													<td>MSISDN Update by Binda Bandung</td>
-													<td>13.00, 12/12/2022</td>
+													<td>12/12/2022 20:00</td>
+													<td
+														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
+														Khusus Ibukota Jakarta</td
+													>
 												</tr>
 												<tr>
-													<td>2</td>
-													<td>MSISDN Update by Binda Jakarta</td>
-													<td>13.00, 12/12/2022</td>
+													<td>12/12/2022 20:00</td>
+													<td
+														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
+														Khusus Ibukota Jakarta</td
+													>
 												</tr>
 												<tr>
-													<td>3</td>
-													<td>MSISDN Update by Binda Yogyakarta</td>
-													<td>13.00, 12/12/2022</td>
+													<td>12/12/2022 20:00</td>
+													<td
+														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
+														Khusus Ibukota Jakarta</td
+													>
 												</tr>
 											</tbody>
 										</table>
@@ -765,14 +764,14 @@
 		/* margin: 0; */
 	}
 	.modal-content {
-		padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+		padding: 1.5rem 1.5rem 1.5rem 2.5rem;
 		margin: 3rem 0 0 -11rem;
 		height: 48.563rem;
 		width: 58.12rem;
 	}
 	.modal-header {
-		/* padding-bottom: 0; */
-		/* margin-bottom: 1.3rem; */
+		padding-bottom: 0;
+		margin-bottom: 1.3rem;
 	}
 	.modal-body {
 		font-size: 1rem;
@@ -857,7 +856,7 @@
 		/* border: 1px solid #404952; */
 		margin-bottom: 11rem;
 	}
-	.msisdn-container,
+
 	.update-container {
 		background: #282f36;
 		border-width: 1px 0px;
@@ -868,10 +867,6 @@
 
 	.update-container {
 		padding: 1.03rem 1rem;
-	}
-	.msisdn-container {
-		padding: 1rem 1rem;
-		margin-bottom: 1.5rem;
 	}
 
 	.last-location,
@@ -929,7 +924,7 @@
 		border-color: #404952;
 	}
 	.tarea-note {
-		width: 810px;
+		width: 790px;
 		margin-bottom: 2.13rem;
 	}
 	.save-button {
@@ -952,5 +947,8 @@
 		border-radius: 0;
 	}
 
+	tbody td {
+		font-size: 0.875rem;
+	}
 	/* cek nomor detail */
 </style>

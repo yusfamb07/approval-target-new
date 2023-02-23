@@ -18,129 +18,256 @@
 	}
 </script>
 
-<nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark">
-	<div class="container-fluid">
-		<a class="navbar-brand">
-			<p class="title">Approval Target</p>
-		</a>
-		<div class="collapse navbar-collapse " id="main_nav">
-			<ul class="navbar-nav">
-				<li class="nav-item dropdown has-megamenu">
+<nav class="navbar navbar-expand-lg ">
+	<div class="container">
+		<!-- <div class="collapse navbar-collapse " id="main_nav">
+			<ul class="navbar-nav ">
+				<li
+					class="nav-item has-megamenu d-flex align-items-center"
+					class:active={$page.url.pathname.includes('/users/dashboard')}
+				>
 					<a
-						class="nav-link"
-						style="color: #fbfdff;"
-						on:click={toggleMenu}
-						href="#!"
-						data-bs-toggle="dropdown"
+						class="txt-link"
+						class:active={$page.url.pathname.includes('/users/telecomunication')}
+						href="/users/dashboard"><img class="iconnav " src="/lawfull.svg" alt="" />Dashboard</a
 					>
-						<img class="iconnav p-1" src="/apptarget.svg" alt="" /> Approval Target
-					</a>
-					<div class="dropdown-menu megamenu" id="menu" role="menu">
-						<div class="container">
-							<div class="row">
-								{#if $page.url.pathname.includes('/users/')}
-									<div class="col-md-6">
-										<li class="p-2" class:active={$page.url.pathname.includes('/users/lawfull')}>
-											<a class="text-white" id="txt-link" href="/users/lawfull"
-												><img class="icon p-1" src="/lawfull.svg" alt="" /> Lawful Interception Request</a
-											>
-										</li>
+				</li>
 
-										<li
-											class="p-2"
-											class:active={$page.url.pathname.includes('/users/geolocation')}
-										>
-											<a class="text-white" id="txt-link" href="/users/geolocation"
-												><img class="icon p-1" src="/geo.svg" alt="" /> Geolocation Request</a
-											>
-										</li>
-									</div>
-									<div class="col-md-6">
-										<li
-											class="p-2"
-											class:active={$page.url.pathname.includes('/users/telecomunication')}
-										>
-											<a class="text-white" id="txt-link" href="/users/telecomunication"
-												><img class="icon p-1" src="/tele.svg" alt="" /> Telecomunication Request</a
-											>
-										</li>
-									</div>
-								{:else}
-									<div class="col-md-6">
-										<li class="p-2" class:active={$page.url.pathname.includes('/analyst/lawfull')}>
-											<a class="text-white" id="txt-link" href="/analyst/lawfull"
-												><img
-													class="icon p-1"
-													style="background-color: #2B3134;"
-													src="/lawfull.svg"
-													alt=""
-												/> Lawful Interception Request</a
-											>
-										</li>
+				<li
+					class="nav-item has-megamenu d-flex align-items-center"
+					class:active={$page.url.pathname.includes('/users/lawfull')}
+				>
+					<a
+						class="txt-link"
+						class:active={$page.url.pathname.includes('/users/telecomunication')}
+						href="/users/lawfull"
+						><img class="iconnav " src="/lawfull.svg" alt="" /> Lawful Interception Request</a
+					>
+				</li>
 
-										<li
-											class="p-2"
-											class:active={$page.url.pathname.includes('/analyst/geolocation')}
-										>
-											<a class="text-white" id="txt-link" href="/analyst/geolocation"
-												><img class="icon p-1" src="/geo.svg" alt="" /> Geolocation Request</a
-											>
-										</li>
-									</div>
-									<div class="col-md-6">
-										<li
-											class="p-2"
-											class:active={$page.url.pathname.includes('/analyst/telecomunication')}
-										>
-											<a class="text-white" id="txt-link" href="/analyst/telecomunication"
-												><img class="icon p-1" src="/tele.svg" alt="" /> Telecomunication Request</a
-											>
-										</li>
-									</div>
-								{/if}
-							</div>
-						</div>
-					</div>
-					<!-- dropdown-mega-menu.// -->
+				<li
+					class="nav-item has-megamenu d-flex align-items-center"
+					class:active={$page.url.pathname.includes('/users/geolocation')}
+				>
+					<a
+						class="txt-link"
+						class:active={$page.url.pathname.includes('/users/telecomunication')}
+						href="/users/geolocation"
+						><img class="iconnav " src="/geo.svg" alt="" /> Geolocation Request</a
+					>
+				</li>
+
+				<li
+					class="nav-item has-megamenu d-flex align-items-center"
+					class:active={$page.url.pathname.includes('/users/telecomunication')}
+				>
+					<a
+						class="txt-link"
+						class:active={$page.url.pathname.includes('/users/telecomunication')}
+						href="/users/telecomunication"
+						><img class="iconnav " src="/tele.svg" alt="" /> Telecomunication Request</a
+					>
 				</li>
 			</ul>
-			<ul class="navbar-nav">
-				<li class="nav-item dropdown has-megamenu">
-					<a
-						class="nav-link"
-						style="color :#fbfdff"
-						href="#!"
-						data-bs-toggle="dropdown"
-						on:click={toggleMenu}
-					>
-						<img class="iconnav p-1" src="/digitalarc.svg" alt="" /> Digital Archiving
-					</a>
-					<div class="dropdown-menu megamenu" id="menu" role="menu">
-						<div class="container">
-							<div class="row" />
-						</div>
-					</div>
-					<!-- dropdown-mega-menu.// -->
+			<ul class="navbar-nav ms-auto d-flex align-items-center gap-3 prof">
+				<li class="nav-item"><img class="img-round" src="/profil.png" alt="" /></li>
+				<li class="nav-item">
+					<h6 class="mt-2">Binda DKI</h6>
 				</li>
 			</ul>
 			<ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
-				<li class="nav-item "><img src="/notification.svg" alt="" /></li>
-				<li class="nav-item"><img src="/profile.png" class="mr-5" alt="" /></li>
-				<li class="nav-item dropdown">
-					<a
-						class="nav-link  dropdown-toggle"
-						id="toogle"
-						href="#"
-						data-bs-toggle="dropdown"
-						style="color :#fbfdff"
+				<li class="nav-item "><img class="icon-item" src="/setting.svg" alt="" /></li>
+				<li class="nav-item ">
+					<img class="icon-item" src="/notification.svg" alt="" />
+					<span
+						style="font-size: 9px;"
+						class="position-absolute start-95 top-3 translate-middle badge rounded-pill bg-danger"
 					>
-						Username
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end">
-						<li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-						<li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-					</ul>
+						99+
+					</span>
 				</li>
+
+				<li class="nav-item"><img class="icon-item" src="/power.svg" alt="" /></li>
+			</ul>
+		</div> -->
+
+		<div class="collapse navbar-collapse " id="main_nav">
+			<ul class="navbar-nav">
+				<li
+					class="nav-item has-megamenu d-flex align-items-center"
+					class:active={$page.url.pathname.includes('/users/dashboard')}
+				>
+					<a
+						class="txt-link d-flex align-items-center gap-2"
+						class:active={$page.url.pathname.includes('/users/telecomunication')}
+						href="/users/dashboard"><img class="iconnav " src="/dashboard.svg" alt="" />Dashboard</a
+					>
+				</li>
+				<li class="nav-item dropdown has-megamenu d-flex align-items-center">
+					<div class="dropdown ">
+						<a
+							style="color: #fbfdff; 	text-decoration: none; font-family: myFirstFont; font-size: 14px; "
+							class="dropdown-toggle nav-link d-flex align-items-center gap-2"
+							role="button"
+							id="dropdownMenuLink"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<img class="iconnav" src="/apptarget.svg" alt="" /> Approval Target
+						</a>
+
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('/apptarget/users/dashboard')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="/apptarget/users/dashboard"
+									><img class="iconnav" src="/dashboard.svg" alt="" /> Dashboard</a
+								>
+							</li>
+
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('/apptarget/users/lawfull')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="/apptarget/users/lawfull"
+									><img class="iconnav" src="/lawfull.svg" alt="" /> Lawful Interception Request</a
+								>
+							</li>
+
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('apptarget/users/geolocation')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="apptarget/users/geolocation"
+									><img class="iconnav" src="/geo.svg" alt="" /> Geolocation Request</a
+								>
+							</li>
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('apptarget/users/telecomunication')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="apptarget/users/telecomunication"
+									><img class="iconnav" src="/tele.svg" alt="" /> Telecomunication Request</a
+								>
+							</li>
+						</ul>
+					</div>
+					<!-- dropdown-mega-menu.// -->
+				</li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown has-megamenu d-flex align-items-center gap-2">
+					<div class="dropdown ">
+						<a
+							style="color: #fbfdff; 	text-decoration: none; font-family: myFirstFont; font-size: 14px; "
+							class="dropdown-toggle nav-link d-flex align-items-center gap-2"
+							href="#!"
+							role="button"
+							id="dropdownMenuLink"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<img class="iconnav" src="/digitalarc.svg" alt="" /> Digital Archiving
+						</a>
+
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('digitalarc/users/dashboard')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="digitalarc/users/dashboard"
+									><img class="iconnav" src="/dashboard.svg" alt="" />Dashboard</a
+								>
+							</li>
+
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('digitalarc/users/lawfull')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="digitalarc/users/lawfull"
+									><img class="iconnav" src="/lawfull.svg" alt="" /> Incoming Mail</a
+								>
+							</li>
+
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('digitalarc/users/geolocation')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="digitalarc/users/geolocation"
+									><img class="iconnav" src="/geo.svg" alt="" />Outgoing Mail</a
+								>
+							</li>
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('digitalarc/users/telecomunication')}
+							>
+								<a
+									class="d-flex align-items-center gap-2"
+									id="txt-link"
+									href="digitalarc/users/telecomunication"
+									><img class="iconnav" src="/tele.svg" alt="" /> Archiving</a
+								>
+							</li>
+							<li
+								class="p-2"
+								class:active={$page.url.pathname.includes('digitalarc/users/telecomunication')}
+							>
+								<a
+									class="d-flex align-items-center gap-1"
+									id="txt-link"
+									href="digitalarc/users/telecomunication"
+									><img class="iconnav" src="/tele.svg" alt="" /> Tracking Mail</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- dropdown-mega-menu.// -->
+				</li>
+			</ul>
+			<div class="ms-auto gap-5">
+				<ul class="navbar-nav d-flex align-items-center gap-3 prof">
+					<li class="nav-item"><img class="img-round" src="/profil.png" alt="" /></li>
+					<li class="nav-item">
+						<h6 class="mt-2">Binda DKI</h6>
+					</li>
+				</ul>
+			</div>
+			<ul class="navbar-nav  d-flex align-items-center gap-3">
+				<li class="nav-item "><img class="icon-item" src="/setting.svg" alt="" /></li>
+				<li class="nav-item ">
+					<img class="icon-item" src="/notification.svg" alt="" />
+					<span
+						style="font-size: 9px;"
+						class="position-absolute start-95 top-3 translate-middle badge rounded-pill bg-danger"
+					>
+						99+
+					</span>
+				</li>
+
+				<li class="nav-item"><img class="icon-item" src="/power.svg" alt="" /></li>
 			</ul>
 		</div>
 

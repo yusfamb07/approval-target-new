@@ -1,21 +1,28 @@
 <script>
-	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
-	import LineChart from '../../../compenents/LineChart.svelte';
-	import GeoChart from '../../../compenents/GeoChart.svelte';
+	import PieChartBinda from '../../../../../compenents/PieChartBinda.svelte';
+	import LineChart from '../../../../../compenents/LineChart.svelte';
+	import OntologiCallIn from '../../../../../compenents/OntologiCallIn.svelte';
+	import OntologiCallOut from '../../../../../compenents/OntologiCallOut.svelte';
+	import OntologiMsgOut from '../../../../../compenents/OntologiMsgOut.svelte';
+	import OntologiMsgIn from '../../../../../compenents/OntologiMsgIn.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 	import { DateInput } from 'date-picker-svelte';
 	import Flatpickr from 'svelte-flatpickr';
 	import 'flatpickr/dist/flatpickr.css';
-	import Navbar from '../../../compenents/Navbar.svelte';
+	import Navbar from '../../../../../compenents/Navbar.svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
 	let selected = [];
 
 	onMount(async () => {
-		new DataTable('#geolist');
+		new DataTable('#tablelist');
 	});
+
+	// onMount(async () => {
+	// 	const datepicker = new datepicker('#tanggal');
+	// });
 </script>
 
 <Navbar />
@@ -27,7 +34,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
-							<h6>Request List (Geolocation )</h6>
+							<h6>Request List (Telecomunication )</h6>
 							<div class="d-flex align-items-center mb-3">
 								<button
 									type="button"
@@ -41,7 +48,7 @@
 							</div>
 						</div>
 
-						<table id="geolist" class="table table-striped mb-5 mt-5" style="width:100%">
+						<table id="tablelist" class="table table-striped mb-5 mt-5" style="width:100%">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -109,7 +116,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -139,7 +146,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -180,6 +187,7 @@
 								/>
 							</div>
 						</div>
+						<div class="d-flex justify-content-between" />
 						<div class="mt-3">
 							<LineChart />
 						</div>
@@ -202,7 +210,7 @@
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
-									Geolocation Request
+									Telecommunication Request
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -230,7 +238,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Geolocation Form Request</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Telecomunication Form Request</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -374,7 +382,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Geolocation Target</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Telecomunication Target</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white "
@@ -406,15 +414,6 @@
 								<p id="msisdn">0826371829192</p>
 							</div>
 							<div class="col-md-4">
-								<p>Tanggal Registrasi</p>
-							</div>
-							<div class="col-md-1">
-								<p>:</p>
-							</div>
-							<div class="col-md-6">
-								<p id="device">14/Oktober/2022</p>
-							</div>
-							<div class="col-md-4">
 								<p>Device</p>
 							</div>
 							<div class="col-md-1">
@@ -423,37 +422,181 @@
 							<div class="col-md-6">
 								<p id="device">APPLE INC APPLE IPHONE 11 PRO MAX (A2220)</p>
 							</div>
-							<div class="col-md-12 mb-2">
-								<h6 class="font-weight-bold">Geolocation Information</h6>
+							<div class="col-md-4">
+								<p>Tanggal Registrasi</p>
+							</div>
+							<div class="col-md-1">
+								<p>:</p>
+							</div>
+							<div class="col-md-6">
+								<p id="device">14/Oktober/2022</p>
 							</div>
 							<div class="col-md-12">
-								<div class="card mb-3" style="	background-color: #384149;">
-									<div class="row mt-3 mb-2">
-										<div class="col-md-4 ">
-											<p>Target Location</p>
-										</div>
-										<div class="col-md-1">
-											<p>:</p>
-										</div>
-										<div class="col-md-6">
-											<p id="target-location">
-												Keluarhan Pulo, Kebayoran Baru, Jakarta Selatan, DKI Jakarta
-											</p>
-										</div>
-										<div class="col-md-4">
-											<p>Target Time</p>
-										</div>
-										<div class="col-md-1">
-											<p>:</p>
-										</div>
-										<div class="col-md-6">
-											<p id="target-time">13:12 14/Oktober/2022</p>
+								<h6 class="font-weight-bold">CDR Information</h6>
+							</div>
+							<div class="col-md-12 mt-3 mb-3">
+								<ul class="nav nav-pills justify-content-between">
+									<li class="nav-item">
+										<a class="nav-link active" data-bs-toggle="pill" href="#callin"
+											>Panggilan Masuk</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#callout">Panggilan Keluar</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#msgin">Pesan Masuk</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#msgout">Pesan Keluar</a>
+									</li>
+								</ul>
+								<div class="tab-content mt-3">
+									<div class="tab-pane active" id="callin" style="color: white;">
+										<OntologiCallIn />
+										<div class="mt-3">
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex align-items-center">
+														<img src="/eclipsered.svg" alt="" />
+														<h6 class="mt-2" style="margin-left: 5px;">Detail Panggilan Masuk</h6>
+													</div>
+													<div class="container">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">0826371829192</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="d-flex justify-content-center">
+																	<p class="">Call Time :</p>
+																	<p class="">14:12</p>
+																</div>
+																<img
+																	src="/lengh.svg"
+																	style="position: absolute; top: 95px;"
+																	alt=""
+																/>
+															</div>
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">(+33)7755545</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
+									<div class="tab-pane fade" id="callout" style="color: white; ">
+										<OntologiCallOut />
+										<div class="mt-3">
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex align-items-center">
+														<img src="/eclipsered.svg" alt="" />
+														<h6 class="mt-2" style="margin-left: 5px;">Detail Panggilan Keluar</h6>
+													</div>
+													<div class="container">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">0826371829192</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="d-flex justify-content-center">
+																	<p class="">Call Time :</p>
+																	<p class="">14:12</p>
+																</div>
+																<img
+																	src="/lengh.svg"
+																	style="position: absolute; top: 95px;"
+																	alt=""
+																/>
+															</div>
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">(+33)7755545</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="msgin" style="color: white; ">
+										<div class="">
+											<OntologiMsgIn />
+										</div>
+										<table id="tablelist" class="table table-striped mb-2 mt-2" style="width:100%">
+											<thead>
+												<tr>
+													<th>MSISDN</th>
+													<th>Isi Pesan</th>
+													<th>Waktu</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="tab-pane fade" id="msgout" style="color: white; ">
+										<div class="">
+											<OntologiMsgOut />
+										</div>
+										<table id="tablelist" class="table table-striped mb-2 mt-2" style="width:100%">
+											<thead>
+												<tr>
+													<th>MSISDN</th>
+													<th>Isi Pesan</th>
+													<th>Waktu</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-12">
-								<GeoChart width="465" height="215" />
 							</div>
 						</div>
 					</div>
