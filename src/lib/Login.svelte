@@ -14,6 +14,7 @@
 		})
 			.then((res) => {
 				if (res.status < 299) return res.json();
+
 				if (res.status > 299) currentError = 'Eror!';
 			})
 			.then((data) => {
