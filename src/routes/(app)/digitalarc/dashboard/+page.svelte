@@ -76,60 +76,62 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="card">
+			<div class="card ">
 				<div class="card-body">
 					<div class="mb-4">
 						<h5 style="color: #BAE2F3">Notification</h5>
 					</div>
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
+					<div class="notif">
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
+						<div class="d-flex align-items-start gap-2">
+							<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
+							<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
+								New Confirmation from Direktur 5.5
+							</p>
+						</div>
+						<hr style="border: 1.2px solid #D4E1E6;" />
 					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
-					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
-					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
-					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
-					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
-					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
-					<div class="d-flex align-items-start gap-2">
-						<p style="font-size: 12px;  white-space: nowrap;">13:00/12/12/2001</p>
-						<p class="fw-bold" style="color: #BAE2F3; font-size: 12px;">
-							New Confirmation from Direktur 5.5
-						</p>
-					</div>
-					<hr style="border: 1.2px solid #D4E1E6;" />
 				</div>
 			</div>
 		</div>

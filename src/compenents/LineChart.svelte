@@ -39,7 +39,7 @@
 				},
 				yaxis: {
 					lines: {
-						show: false
+						show: true
 					}
 				},
 				row: {

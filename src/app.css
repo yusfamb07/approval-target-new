@@ -1189,3 +1189,10 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 	border: 1px solid rgba(205, 234, 246, 0.17);
 	border-radius: 2px;
 }
+
+.notif {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 500px;
+	width: 250px;
+}
