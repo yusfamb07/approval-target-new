@@ -4,7 +4,7 @@
 	let currentError = null;
 
 	const login = () => {
-		fetch('http://17.1.16.45:3001/backend/auth/signin', {
+		fetch('http://17.1.16.34:3001/backend/auth/signin', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json',

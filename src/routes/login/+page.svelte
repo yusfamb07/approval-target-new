@@ -5,7 +5,7 @@
 	let currentError = null;
 
 	const login = () => {
-		fetch('http://17.1.16.45:3001/backend/auth/signin', {
+		fetch('http://17.1.16.34:3001/backend/auth/signin', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json',
@@ -14,7 +14,7 @@
 			body: JSON.stringify({ username: username, password: password })
 		})
 			.then((res) => {
-				if (res.status < 299) goto('/users/dashboard');
+				if (res.status < 299) goto('/apptarget/users/dashboard');
 				return res.json();
 			})
 			.then((res) => {

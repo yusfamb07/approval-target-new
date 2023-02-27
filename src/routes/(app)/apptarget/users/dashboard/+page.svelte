@@ -667,7 +667,7 @@
 		<div class="col-md-6">
 			<ul class="nav nav-pills justify-content-start">
 				<li class="nav-item">
-					<a class="nav-link active" data-bs-toggle="pill" href="#callin">All Method</a>
+					<a class="nav-link active" data-bs-toggle="pill" href="#allmethod">All Method</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" data-bs-toggle="pill" href="#callout">Lawful Intercaption</a>
@@ -682,7 +682,7 @@
 		</div>
 	</div>
 	<div class="tab-content">
-		<div class="tab-pane active" id="callin" style="color: white;">
+		<div class="tab-pane active" id="allmethod" style="color: white;">
 			<div class="card-box">
 				<div class="row">
 					<div class="col-md-12">
@@ -757,3 +757,11 @@
 		<div class="tab-pane fade" id="msgout" style="color: white; " />
 	</div>
 </div>
+
+<style>
+	.nav-pills a {
+		color: #fbfdff;
+		font-family: myFirstFont;
+		font-size: 14px;
+	}
+</style>

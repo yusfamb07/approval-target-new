@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import Navbar from '../../../../compenents/Navbar.svelte';
 	import BarChartNew from '../../../../compenents/BarChartNew.svelte';
+	import Select from '../../../../compenents/Select.svelte';
 
 	import Flatpickr from 'svelte-flatpickr';
 	import 'flatpickr/dist/flatpickr.css';
