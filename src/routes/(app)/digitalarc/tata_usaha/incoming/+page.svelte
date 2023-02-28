@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import Navbar from '../../../../../compenents/Navbar.svelte';
-	import Select from '../../../../../compenents/Select.svelte';
+	// import Select from '../../../../../compenents/Select.svelte';
 
 	const options = {};
 	onMount(async () => {
@@ -86,7 +86,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Telecomunication Target</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Icoming Mail</h5>
 					<button
 						type="button"
 						class="btn-close btn-close-white "
@@ -98,7 +98,7 @@
 					<div class="row">
 						<div class="col-md-12 mt-3 mb-3">
 							<div class="row">
-								<div class="col-md-7">
+								<div class="col-md-5">
 									<ul class="nav nav-pills justify-content-start">
 										<li class="nav-item">
 											<a class="nav-link active" data-bs-toggle="pill" href="#callin"
@@ -117,13 +117,13 @@
 							<div class="tab-content">
 								<div class="tab-pane active" id="callin" style="color: white;">
 									<div class="mt-3">
-										<div class="row gap-3">
+										<div class="row gap-2">
 											<div class="col-md-3">
 												<h6 style="white-space:nowrap">Incoming Mail Form</h6>
 											</div>
 											<div class="col-md-8">
 												<hr
-													style="border: 1.2px solid #D4E1E6; height: 1px; vertical-align:middle"
+													style="borde-top: 1.2px solid #D4E1E6; height: 1px; vertical-align:middle"
 												/>
 											</div>
 										</div>
@@ -249,7 +249,18 @@
 														/>
 													</div>
 												</div>
-												<Select option={[{ value: 'option 1', label: 'option 1' }]} />
+												<div class="input-group mb-3">
+													<input
+														type="date"
+														class="form-control modal-form"
+														id="date"
+														aria-describedby="basic-addon3"
+														placeholder="SRT/12"
+														required
+													/>
+												</div>
+												<!-- <Select option={[{ value: 'option 1', label: 'option 1' }]} /> -->
+												<!-- <Select /> -->
 											</div>
 											<div class="col-md-6">
 												<p>Date</p>
@@ -344,5 +355,11 @@
 		height: 23px;
 		background: #2f383b;
 		border: 1px solid #5e727a;
+	}
+
+	.modal-content {
+		/* padding: 1.5rem 1.5rem 1.5rem 1.5rem; */
+		margin: 3rem 0 0 -7rem;
+		width: 720px;
 	}
 </style>
