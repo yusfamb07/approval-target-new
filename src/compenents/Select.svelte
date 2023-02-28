@@ -1,25 +1,31 @@
 <script>
-	import { onMount } from 'svelte';
 	import { Select } from 'antd';
-
-	const { Option } = Select;
-	export let option;
-	onMount((async) => {
-		// lakukan sesuatu di sini setelah komponen dimuat
-		const options = [
-			{ value: 'Option 1', label: 'Option 1' },
-			{ value: 'Option 2', label: 'Option 2' },
-			{ value: 'Option 3', label: 'Option 3' }
-		];
-
-		// Membuat instance Select dari Ant Design
-		const select = new Select({
-			target: document.querySelector('#my-select'),
-			props: {
-				options: options
-			}
-		});
-	});
+	import preprocess from 'svelte-preprocess';
 </script>
 
-<div id="my-select" />
+<Select
+	defaultValue="lucy"
+	style={{
+		width: 120
+	}}
+	onChange={handleChange}
+	options={[
+		{
+			value: 'jack',
+			label: 'Jack'
+		},
+		{
+			value: 'luc	y',
+			label: 'Lucy'
+		},
+		{
+			value: 'Yiminghe',
+			label: 'yiminghe'
+		},
+		{
+			value: 'disabled',
+			label: 'Disabled',
+			disabled: true
+		}
+	]}
+/>
