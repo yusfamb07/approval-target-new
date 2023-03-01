@@ -14,8 +14,6 @@
 	});
 </script>
 
-<Navbar />
-
 <div class="container mt-3">
 	<div class="d-flex align-items-center gap-3">
 		<h5 class="fw-bold" id="welcome-txt">List BINDA</h5>

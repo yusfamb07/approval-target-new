@@ -14,8 +14,6 @@
 	});
 </script>
 
-<Navbar />
-
 <div class="container mt-3">
 	<div class="d-flex align-items-center gap-3">
 		<img src="/kotak.png" alt="" />
