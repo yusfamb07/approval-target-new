@@ -30,7 +30,7 @@ h6 {
 }
 p {
 	font-size: 14px;
-	color: rgba(251, 253, 255, 0.8);
+	/* color: rgba(251, 253, 255, 0.8);  */ /* kalo bisa ini color di per page aja biar ga ketiban di page lain */
 	font-family: myFirstFont;
 }
 
