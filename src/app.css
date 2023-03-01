@@ -17,16 +17,12 @@ p {
 	font-family: myFirstFont;
 }
 span {
-	color: #FBFDFF;
+	color: #fbfdff;
 	font-family: myFirstFont;
-
-
 }
 label {
-	color: #FBFDFF !important;
+	color: #fbfdff !important;
 	font-family: myFirstFont;
-
-
 }
 h6 {
 	font-size: 14px;
@@ -211,6 +207,11 @@ div.alphabetInfo {
 	color: #fff;
 }
 
+.detail {
+	background-color: #3d454b;
+	border: #4c5056;
+}
+
 /* .navbar .has-megamenu:hover {
 	background: linear-gradient(90deg, #454b51 0%, #343c43 100%);
 	box-shadow: inset -2px -2px 2px #474f56, inset 3px 2px 2px #1e2328;
@@ -340,6 +341,7 @@ div.alphabetInfo {
 	/* border: #21262b; */
 	/* border: 1px solid #fbfdff; */
 	color: #fbfdff;
+	border-radius: 0% !important;
 }
 
 .modal-form-upload {
@@ -825,13 +827,28 @@ textarea {
 
 .add-new {
 	border-radius: 0;
-	border-top: 1px solid #8994a5 !important;
-	border-bottom: 1px solid #8994a5 !important;
+	border: 1px solid #8994a5 !important;
 	background-color: #2a2e31;
 	color: #fff;
 	border: 0px;
 	font-size: 14px;
 	font-family: myFirstFont;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.add-detail {
+	border-radius: 0;
+	border: 1px solid #8994a5 !important;
+	background-color: #2a2e31;
+	color: #fff;
+	border: 0px;
+	font-size: 12px;
+	font-family: myFirstFont;
+	display: flex;
+	justify-content: center;
+	gap: 6px;
 }
 
 .submit-btn {
@@ -1110,6 +1127,11 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 	color: #fbfdff;
 }
 
+.tab {
+	width: 260px;
+	color: #bae2f3 !important;
+}
+
 .filter-form {
 	background-color: #1d2023;
 	border: 0%;
@@ -1218,4 +1240,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 	overflow-x: hidden;
 	height: 560px;
 	width: 250px;
+}
+
+select {
 }

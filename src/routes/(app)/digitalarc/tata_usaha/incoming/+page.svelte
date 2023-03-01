@@ -11,6 +11,16 @@
 		});
 	});
 
+	let questions = [
+		{ id: 1, text: `Option 1` },
+		{ id: 2, text: `Option 2` },
+		{ id: 3, text: `Option 3` }
+	];
+
+	let selected;
+
+	let answer = '';
+
 	export let data;
 	const { posts } = data;
 </script>
@@ -57,15 +67,48 @@
 								<td>{post.file}</td>
 								<td><a href="">{post.status}</a></td>
 								<td><a href="">{post.disposition}</a></td>
-								<td
-									><span
-										class="detail-container"
-										data-bs-toggle="modal"
-										data-bs-target="#DetailModal1"
-										><img src="/icon_action.svg" alt="icon detail" />
-										<p>Action</p></span
-									></td
-								>
+								<td>
+									<div class="dropdown ">
+										<button
+											type="button"
+											class="btn btn-secondary add-detail"
+											id="dropdownMenuLink"
+											data-bs-toggle="dropdown"
+											aria-expanded="false"
+										>
+											<img src="/icon_action.svg" alt="" />
+											Detail</button
+										>
+										<ul class="dropdown-menu detail" aria-labelledby="dropdownMenuLink">
+											<li class="p-2">
+												<a
+													class="d-flex align-items-center gap-2"
+													id="txt-link"
+													href="/apptarget/users/dashboard"
+													><img class="iconnav" src="/dashboard.svg" alt="" /> Detail</a
+												>
+											</li>
+
+											<li class="p-2">
+												<a
+													class="d-flex align-items-center gap-2"
+													id="txt-link"
+													href="/apptarget/users/lawfull"
+													><img class="iconnav" src="/lawfull.svg" alt="" /> Edit</a
+												>
+											</li>
+
+											<li class="p-2">
+												<a
+													class="d-flex align-items-center gap-2"
+													id="txt-link"
+													href="apptarget/users/geolocation"
+													><img class="iconnav" src="/geo.svg" alt="" /> Send</a
+												>
+											</li>
+										</ul>
+									</div>
+								</td>
 							</tr>
 						{/each}
 					</tbody>
@@ -86,29 +129,31 @@
 					<h5 class="modal-title" id="exampleModalLabel">Icoming Mail</h5>
 					<button
 						type="button"
-						class="btn-close btn-close-white "
+						class="btn-close btn-close-white dropdown "
 						data-bs-dismiss="modal"
 						aria-label="Close"
 					/>
 				</div>
+
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-md-12 mt-3 mb-3">
+							<div class="tab">
+								<ul class="nav nav-pills justify-content-start">
+									<li class="nav-item">
+										<a class="nav-link active" data-bs-toggle="pill" href="#callin"
+											>Incoming Mail Form</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#dispositionform"
+											>Disposition Form</a
+										>
+									</li>
+								</ul>
+							</div>
 							<div class="row">
-								<div class="col-md-5">
-									<ul class="nav nav-pills justify-content-start">
-										<li class="nav-item">
-											<a class="nav-link active" data-bs-toggle="pill" href="#callin"
-												>Incoming Mail Form</a
-											>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-bs-toggle="pill" href="#dispositionform"
-												>Disposition Form</a
-											>
-										</li>
-									</ul>
-								</div>
+								<div class="col-md-5" />
 							</div>
 
 							<div class="tab-content">
@@ -316,7 +361,26 @@
 												</div>
 											</div>
 											<div class="col-md-4">
-												<Select />
+												<p>Attachment</p>
+												<select
+													value={selected}
+													on:change={() => (answer = '')}
+													class="form-select form-select-md  modal-form"
+													aria-label=".form-select-sm example"
+												>
+													{#each questions as question}
+														<option value={question}>
+															{question.text}
+														</option>
+													{/each}
+												</select>
+												<!-- <select value={selected} on:change={() => (answer = '')}>
+													{#each questions as question}
+														<option value={question}>
+															{question.text}
+														</option>
+													{/each}
+												</select> -->
 											</div>
 										</div>
 									</div>
