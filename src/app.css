@@ -17,16 +17,12 @@ p {
 	font-family: myFirstFont;
 }
 span {
-	color: #FBFDFF;
+	color: #fbfdff;
 	font-family: myFirstFont;
-
-
 }
 label {
-	color: #FBFDFF !important;
+	color: #fbfdff !important;
 	font-family: myFirstFont;
-
-
 }
 h6 {
 	font-size: 14px;
