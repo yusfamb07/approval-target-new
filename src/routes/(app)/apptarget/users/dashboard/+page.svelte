@@ -38,8 +38,6 @@
 	const { posts } = data;
 </script>
 
-<Navbar />
-
 <div class="container mt-5 ">
 	<div class="d-flex align-items-center gap-3">
 		<img src="/kotak.png" alt="" />

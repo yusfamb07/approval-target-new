@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import Navbar from '../../../../../compenents/Navbar.svelte';
-	// import Select from '../../../../../compenents/Select.svelte';
+	import Select from '../../../../../compenents/Select.svelte';
 
 	const options = {};
 	onMount(async () => {
@@ -15,8 +14,6 @@
 	export let data;
 	const { posts } = data;
 </script>
-
-<Navbar />
 
 <div class="container mt-3">
 	<div class="col-md-12">
@@ -202,67 +199,110 @@
 												<h6 style="white-space:nowrap">Disposition Mail Form</h6>
 											</div>
 											<div class="col-md-8">
-												<hr
-													style="border: 1.2px solid #D4E1E6; height: 1px; vertical-align:middle"
-												/>
+												<hr style="border-top: 1px solid white; width: 100%" />
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="d-flex align-items-center gap-2">
-													<p class="urgensi">Klasifikasi:</p>
-
-													<div class="d-flex align-items-center gap-2">
-														<p class="urgensi">SR</p>
-														<input
-															class="form-check-input mt-0"
-															type="checkbox"
-															value="SR"
-															required
-														/>
-													</div>
-													<div class="d-flex align-items-center gap-2">
-														<p class="urgensi">R</p>
-														<input
-															class="form-check-input mt-0"
-															type="checkbox"
-															value="R"
-															required
-														/>
-													</div>
-													<div class="d-flex align-items-center gap-2">
-														<p class="urgensi">KT</p>
-														<input
-															class="form-check-input mt-0"
-															type="checkbox"
-															value="KT"
-															required
-														/>
-													</div>
-													<div class="d-flex align-items-center gap-2">
-														<p class="urgensi">B</p>
-														<input
-															class="form-check-input mt-0"
-															type="checkbox"
-															value="B"
-															required
-														/>
+												<div class="radio-item" style="padding: 24px 0;">
+													<div class="d-flex gap-5">
+														<div class="d-flex align-items-baseline">
+															<span>Klasifikasi :</span>
+															<div class="radio-item">
+																<input type="checkbox" id="SR" name="gender" value="SR" />
+																<label for="SR">SR</label>
+															</div>
+															<div class="radio-item2">
+																<input type="checkbox" id="R" name="gender" value="R" />
+																<label for="R">R</label>
+															</div>
+															<div class="radio-item">
+																<input type="checkbox" id="KT" name="gender" value="KT" />
+																<label for="KT">KT</label>
+															</div>
+															<div class="radio-item2">
+																<input type="checkbox" id="B" name="gender" value="B" />
+																<label for="B">B</label>
+															</div>
+														</div>
 													</div>
 												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="radio-item" style="padding: 24px 0;">
+													<div class="d-flex align-items-baseline">
+														<span>Derajat :</span>
+														<div class="radio-item2">
+															<input type="checkbox" id="K" name="gender" value="K" />
+															<label for="K">K</label>
+														</div>
+
+														<div class="radio-item">
+															<input type="checkbox" id="SS" name="gender" value="SS" />
+															<label for="SS">SS</label>
+														</div>
+														<div class="radio-item">
+															<input type="checkbox" id="SB" name="gender" value="SB" />
+															<label for="SB">SB</label>
+														</div>
+														<div class="radio-item2">
+															<input type="checkbox" id="B2" name="gender" value="B" />
+															<label for="B2">B</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<span class="fw-bold mb-3">Received From</span>
+											</div>
+										</div>
+										<div class="row mt-3">
+											<div class="col-md-6">
+												<p>Letter Origin</p>
 												<div class="input-group mb-3">
 													<input
-														type="date"
+														type="text"
 														class="form-control modal-form"
-														id="date"
+														id="letter-origin"
 														aria-describedby="basic-addon3"
-														placeholder="SRT/12"
 														required
 													/>
 												</div>
-												<!-- <Select option={[{ value: 'option 1', label: 'option 1' }]} /> -->
-												<!-- <Select /> -->
 											</div>
 											<div class="col-md-6">
+												<p>Letter Number</p>
+												<div class="input-group mb-3">
+													<input
+														type="text"
+														class="form-control modal-form"
+														id="letter-number"
+														aria-describedby="basic-addon3"
+														required
+													/>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<span class="fw-bold mb-3">Agenda</span>
+											</div>
+										</div>
+										<div class="row mt-3">
+											<div class="col-md-4">
+												<p>Id</p>
+												<div class="input-group mb-3">
+													<input
+														type="text"
+														class="form-control modal-form"
+														id="id"
+														aria-describedby="basic-addon3"
+														required
+													/>
+												</div>
+											</div>
+											<div class="col-md-4">
 												<p>Date</p>
 												<div class="input-group mb-3">
 													<input
@@ -275,44 +315,8 @@
 													/>
 												</div>
 											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<p>Letter Origin</p>
-												<div class="input-group mb-3">
-													<input
-														type="text"
-														class="form-control modal-form"
-														id="no-surat"
-														aria-describedby="basic-addon3"
-														required
-													/>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<p>Regarding</p>
-												<div class="input-group mb-3">
-													<input
-														type="text"
-														class="form-control modal-form"
-														id="regarding"
-														aria-describedby="basic-addon3"
-														required
-													/>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<p>Upload File</p>
-												<div class="input-group mb-3">
-													<input
-														type="file"
-														class="form-control modal-form"
-														id="formFile"
-														required
-													/>
-												</div>
+											<div class="col-md-4">
+												<Select />
 											</div>
 										</div>
 									</div>
@@ -361,5 +365,95 @@
 		/* padding: 1.5rem 1.5rem 1.5rem 1.5rem; */
 		margin: 3rem 0 0 -7rem;
 		width: 720px;
+	}
+
+	.radio-item {
+		display: flex;
+		align-items: baseline;
+		position: relative;
+		padding: 0 6px;
+	}
+
+	.radio-item input[type='checkbox'] {
+		display: none;
+	}
+
+	.radio-item label {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	.radio-item label:before {
+		content: ' ';
+		display: inline-block;
+		position: relative;
+		top: 5px;
+		margin: 0 5px 0 0;
+		width: 20px;
+		height: 20px;
+		background: #2f383b;
+		border: 1px solid #365a68;
+		background-color: transparent;
+	}
+
+	.radio-item input[type='checkbox']:checked + label:after {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 10px;
+		left: 36px;
+		content: ' ';
+		display: block;
+		background-repeat: no-repeat;
+		background-image: url('/check.svg');
+	}
+	.radio-item input[type='checkbox']:checked + label:nth-child(odd):after {
+		left: 30px;
+		position: absolute;
+	}
+
+	.radio-item2 {
+		display: flex;
+		align-items: baseline;
+		position: relative;
+		padding: 0 6px;
+	}
+
+	.radio-item2 input[type='checkbox'] {
+		display: none;
+	}
+
+	.radio-item2 label {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	.radio-item2 label:before {
+		content: ' ';
+		display: inline-block;
+		position: relative;
+		top: 5px;
+		margin: 0 5px 0 0;
+		width: 20px;
+		height: 20px;
+		background: #2f383b;
+		border: 1px solid #5e727a;
+		background-color: transparent;
+	}
+
+	.radio-item2 input[type='checkbox']:checked + label:after {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 10px;
+		left: 28px;
+		content: ' ';
+		display: block;
+		background-repeat: no-repeat;
+		background-image: url('/check.svg');
 	}
 </style>

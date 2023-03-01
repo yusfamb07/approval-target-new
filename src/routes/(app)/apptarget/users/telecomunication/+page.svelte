@@ -25,8 +25,6 @@
 	// });
 </script>
 
-<Navbar />
-
 <div class="konten">
 	<div class="container">
 		<div class="row mt-4">

@@ -22,8 +22,6 @@
 	// });
 </script>
 
-<Navbar />
-
 <div class="konten">
 	<div class="container-fluid mt-3">
 		<div class="row mt-4">

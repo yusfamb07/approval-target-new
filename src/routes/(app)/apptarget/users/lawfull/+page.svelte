@@ -21,8 +21,6 @@
 	});
 </script>
 
-<Navbar />
-
 <div class="container mt-3">
 	<h5 class="fw-bold mt-5">Lawfull Interception Request</h5>
 	<div class="row mt-4">
