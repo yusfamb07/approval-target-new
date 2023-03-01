@@ -851,6 +851,18 @@ textarea {
 	gap: 6px;
 }
 
+.decline-note {
+	border-radius: 0;
+	border-top: 1px solid #8994a5 !important;
+	border-bottom: 1px solid #8994a5 !important;
+	background-color: #2a2e31;
+	color: #fff;
+	border: 0px;
+	margin: 0 17px;
+	font-size: 14px;
+	font-family: myFirstFont;
+}
+
 .submit-btn {
 	border-radius: 0;
 	background-color: #2a2e31;

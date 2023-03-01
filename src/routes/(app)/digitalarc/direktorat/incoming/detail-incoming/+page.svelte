@@ -38,13 +38,13 @@
 
 				<div class="d-grid gap-2 input-mail">
 					<span>File</span>
-					<div class="d-flex" style="gap: 1.375rem;                    ">
+					<div class="d-flex" style="gap: 1.375rem;">
 						<input type="text" placeholder="Nama-File.pdf" class="input" style="width: 30%;" />
 						<button
 							style="	background: #242b2d;
-                        border: 1px solid #5e727a; width: 20%"
+	border: 1px solid #5e727a; color: white"
 							class="d-flex align-items-center justify-content-center gap-2"
-							><img src="/download-icon.svg" alt="" /> Download File</button
+							><img src="/download-icon.svg" alt="" />Download File</button
 						>
 					</div>
 				</div>
@@ -225,24 +225,110 @@
 						</label>
 					</div>
 				</div>
-				<div class="d-flex">
-					<div class="d-grid gap-2 mb-2">
+				<div class="d-flex align-items-baseline gap-3">
+					<div class="d-grid w-50 gap-2 mb-2">
 						<span>Retro</span>
 						<input
 							type="text"
 							id="etc"
 							name="gender"
-							style="color: gray; border: 1px solid #404952; padding-left: 15px; width: 50%"
+							style="color: gray; border: 1px solid #404952; padding-left: 15px;"
 						/>
 					</div>
-					<div class="d-grid gap-2">
+					<div class="d-grid w-50 gap-2">
 						<span>Copy</span>
 						<input
 							type="text"
 							id="etc"
 							name="gender"
-							style="color: gray; border: 1px solid #404952; padding-left: 15px; width: 50%"
+							style="color: gray; border: 1px solid #404952; padding-left: 15px; "
 						/>
+					</div>
+				</div>
+				<div class="d-grid w-100">
+					<span>Note</span>
+					<input
+						type="text"
+						id="etc"
+						name="gender"
+						style="color: gray; border: 1px solid #404952; padding-left: 15px; height: 170px"
+					/>
+				</div>
+				<div class="d-flex gap-4 mt-5">
+					<button
+						style="	background: #242b2d;
+	border: 1px solid #5e727a; color: white"
+						class="d-flex align-items-center justify-content-center gap-2 mt-3 p-2"
+						><img src="/approve-letter-icon.svg" alt="" />Approve Letter</button
+					>
+
+					<button
+						type="button"
+						data-bs-toggle="modal"
+						data-bs-target="#FormModal"
+						style="	background: #242b2d;
+	border: 1px solid #5e727a; color: white"
+						class="d-flex align-items-center justify-content-center gap-2 mt-3 p-2 btn btn-secondary add-new"
+						><img src="/decline-with-note-icon.svg" alt="" />Decline with Note</button
+					>
+				</div>
+
+				<div
+					class="modal fade"
+					id="FormModal"
+					tabindex="-1"
+					aria-labelledby="exampleModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Decline with Note</h5>
+								<button
+									type="button"
+									class="btn-close btn-close-white "
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								/>
+							</div>
+
+							<div class="btn btn-secondary decline-note">
+								<div class="d-flex justify-content-between m-2">
+									<span>Silahkan Tulis Catatan</span>
+									<div class="d-flex gap-1">
+										<img src="/reset-icon.svg" alt="" />
+										<span>Reset</span>
+									</div>
+								</div>
+								<div class="m-2">
+									<textarea
+										class="w-100"
+										placeholder="Silahkan Tuliskan Catatan ....."
+										style="background: #EAEBED;
+									border: 1px solid #404952;
+									border-radius: 2px; height: 220px; color: #282F36;"
+									/>
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<button
+									type="submit"
+									class="btn btn-secondary submit-btn d-flex gap-3"
+									data-bs-toggle="modal"
+									data-bs-target="#FeedbackModal"
+									><img src="/approve-letter-icon.svg" alt="" />
+									<div>Send Note</div>
+								</button>
+								<button
+									type="button"
+									class="btn btn-secondary submit-btn d-flex gap-3"
+									data-bs-dismiss="modal"
+									><img src="/cancel-icon.svg" alt="" />
+									<div>Cancel</div>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -259,6 +345,7 @@
 	}
 
 	.input {
+		padding: 7px 16px;
 		display: grid;
 		background: #242b2d;
 		border: 1px solid #5e727a;
@@ -392,16 +479,15 @@
 		margin: 0 5px 0 0;
 		width: 20px;
 		height: 20px;
-		background: #ffffff;
+		background: #2f383b;
 		border: 1px solid #5e727a;
-		background-color: white;
 	}
 
 	.radio-item3 input[type='checkbox']:checked + label:after {
 		width: 12px;
 		height: 12px;
 		position: absolute;
-		top: 40px;
+		top: 42px;
 		left: 11px;
 		content: ' ';
 		display: block;
@@ -411,5 +497,25 @@
 	.radio-item3 input[type='checkbox']:checked + label:after {
 		left: 11px;
 		position: absolute;
+	}
+
+	.detail-container {
+		cursor: pointer;
+		display: flex;
+		align-items: baseline;
+		align-content: center;
+		justify-content: center;
+		gap: 0.5rem;
+		/* padding-top: 0.5rem; */
+		width: 64px;
+		height: 23px;
+		background: #2f383b;
+		border: 1px solid #5e727a;
+	}
+
+	.modal-content {
+		/* padding: 1.5rem 1.5rem 1.5rem 1.5rem; */
+		margin: 3rem 0 0 -7rem;
+		width: 720px;
 	}
 </style>
