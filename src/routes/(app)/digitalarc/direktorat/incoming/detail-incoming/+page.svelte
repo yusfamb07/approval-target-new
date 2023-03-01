@@ -64,7 +64,7 @@
 								<input type="checkbox" id="SR" name="gender" value="SR" />
 								<label for="SR">SR</label>
 							</div>
-							<div class="radio-item">
+							<div class="radio-item2">
 								<input type="checkbox" id="R" name="gender" value="R" />
 								<label for="R">R</label>
 							</div>
@@ -72,14 +72,14 @@
 								<input type="checkbox" id="KT" name="gender" value="KT" />
 								<label for="KT">KT</label>
 							</div>
-							<div class="radio-item">
+							<div class="radio-item2">
 								<input type="checkbox" id="B" name="gender" value="B" />
 								<label for="B">B</label>
 							</div>
 						</div>
 						<div class="d-flex align-items-baseline">
 							<span>Derajat :</span>
-							<div class="radio-item">
+							<div class="radio-item2">
 								<input type="checkbox" id="K" name="gender" value="K" />
 								<label for="K">K</label>
 							</div>
@@ -92,7 +92,7 @@
 								<input type="checkbox" id="SB" name="gender" value="SB" />
 								<label for="SB">SB</label>
 							</div>
-							<div class="radio-item">
+							<div class="radio-item2">
 								<input type="checkbox" id="B2" name="gender" value="B" />
 								<label for="B2">B</label>
 							</div>
@@ -101,36 +101,136 @@
 				</div>
 
                 <span>Destination to :</span>
-				<div>
-                    <div class="radio-item">
-                        <input type="checkbox" id="KASUBDIT 5.1" name="gender" value="KASUBDIT 5.1" />
+				<div class="d-flex flex-wrap">
+                    <div class="radio-item3">
+						<input type="checkbox" id="KASUBDIT 5.1" name="gender" value="KASUBDIT 5.1" />
                         <label for="KASUBDIT 5.1">KASUBDIT 5.1</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item3">
                         <input type="checkbox" id="KASUBDIT 5.2" name="gender" value="KASUBDIT 5.2" />
                         <label for="KASUBDIT 5.2">KASUBDIT 5.2</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item3">
                         <input type="checkbox" id="KASUBDIT 5.3" name="gender" value="KASUBDIT 5.3" />
                         <label for="KASUBDIT 5.3">KASUBDIT 5.3</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item3">
                         <input type="checkbox" id="AGEN MADYA 55" name="gender" value="AGEN MADYA 55" />
                         <label for="AGEN MADYA 55">AGEN MADYA 55</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item3">
                         <input type="checkbox" id="KASUBDIT 5.4" name="gender" value="KASUBDIT 5.4" />
                         <label for="KASUBDIT 5.4">KASUBDIT 5.4</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item3">
                         <input type="checkbox" id="KASUBDIT 5.5" name="gender" value="KASUBDIT 5.5" />
                         <label for="KASUBDIT 5.5">KASUBDIT 5.5</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item3">
                         <input type="checkbox" id="STAFF TU" name="gender" value="STAFF TU" />
                         <label for="STAFF TU">STAFF TU</label>
+                    </div>                    
+				</div>
+
+				<span>Disposition Content :</span>
+				<div class="d-flex flex-wrap">
+                    <div class="radio-item3">
+						<input type="checkbox" id="Acc" name="gender" value="Acc" />
+                        <label for="Acc">Acc</label>
                     </div>
-                    
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Kembangkan" name="gender" value="Kembangkan" />
+                        <label for="Kembangkan">Kembangkan</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Saran" name="gender" value="Saran" />
+                        <label for="Saran">Saran</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Wakili" name="gender" value="Wakili" />
+                        <label for="Wakili">Wakili</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Lanjutkan" name="gender" value="Lanjutkan" />
+                        <label for="Lanjutkan">Lanjutkan</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Kordinasikan" name="gender" value="Kordinasikan" />
+                        <label for="Kordinasikan">Kordinasikan</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Menghadap" name="gender" value="Menghadap" />
+                        <label for="Menghadap">Menghadap</label>
+                    </div>      
+					<div class="radio-item3">
+                        <input type="checkbox" id="Dalami" name="gender" value="Dalami" />
+                        <label for="Dalami">Dalami</label>
+                    </div>  
+					<div class="radio-item3">
+                        <input type="checkbox" id="Pantau" name="gender" value="Pantau" />
+                        <label for="Pantau">Pantau</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="UDK" name="gender" value="UDK" />
+                        <label for="UDK">UDK</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Untuk Pedoman" name="gender" value="Untuk Pedoman" />
+                        <label for="Untuk Pedoman">Untuk Pedoman</label>
+                    </div>      
+					<div class="radio-item3">
+                        <input type="checkbox" id="Lakukan Gal" name="gender" value="Lakukan Gal" />
+                        <label for="Lakukan Gal">Lakukan Gal</label>
+                    </div>        
+					<div class="radio-item3">
+                        <input type="checkbox" id="Counter" name="gender" value="Counter" />
+                        <label for="Counter">Counter</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Teruskan" name="gender" value="Teruskan" />
+                        <label for="Teruskan">Teruskan</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Dibantu" name="gender" value="Dibantu" />
+                        <label for="Dibantu">Dibantu</label>
+                    </div>      
+					<div class="radio-item3">
+                        <input type="checkbox" id="Cukupi" name="gender" value="Cukupi" />
+                        <label for="Cukupi">Cukupi</label>
+                    </div>                    
+					<div class="radio-item3">
+                        <input type="checkbox" id="Acarakan" name="gender" value="Acarakan" />
+                        <label for="Acarakan">Acarakan</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="Pelajari" name="gender" value="Pelajari" />
+                        <label for="Pelajari">Pelajari</label>
+                    </div>
+                    <div class="radio-item3">
+                        <input type="checkbox" id="UDL" name="gender" value="UDL" />
+                        <label for="UDL">UDL</label>
+                    </div>      
+					<div class="radio-item3">
+                        <input type="checkbox" id="File" name="gender" value="File" />
+                        <label for="File">File</label>
+                    </div>  
+					<div class="radio-item3">
+                        <input type="checkbox" id="etc" name="gender" value="etc" />
+						<label for="">
+							<input type="text" id="etc" name="gender" placeholder="Please write" style="color: gray; border: 1px solid #404952; padding-left: 15px"/>
+						</label>
+                    </div>                    
+				</div>
+				<div class="d-flex">
+					<div class="d-grid gap-2 mb-2">
+						<span>Retro</span>
+						<input type="text" id="etc" name="gender"  style="color: gray; border: 1px solid #404952; padding-left: 15px; width: 50%"/>
+					</div>
+					<div class="d-grid gap-2">
+						<span>Copy</span>
+						<input type="text" id="etc" name="gender"  style="color: gray; border: 1px solid #404952; padding-left: 15px; width: 50%"/>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -186,7 +286,7 @@
 		width: 20px;
 		height: 20px;
 		background: #2f383b;
-		border: 1px solid #5e727a;
+		border: 1px solid #365a68;
 		background-color: transparent;
 	}
 
@@ -203,6 +303,100 @@
 	}
 	.radio-item input[type='checkbox']:checked + label:nth-child(odd):after {
 		left: 30px;
+		position: absolute;
+	}
+
+	.radio-item2 {
+		display: flex;
+		align-items: baseline;
+		position: relative;
+		padding: 0 6px;
+	}
+
+	.radio-item2 input[type='checkbox'] {
+		display: none;
+	}
+
+	.radio-item2 label {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	.radio-item2 label:before {
+		content: ' ';
+		display: inline-block;
+		position: relative;
+		top: 5px;
+		margin: 0 5px 0 0;
+		width: 20px;
+		height: 20px;
+		background: #2f383b;
+		border: 1px solid #5e727a;
+		background-color: transparent;
+	}
+
+	.radio-item2 input[type='checkbox']:checked + label:after {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 10px;
+		left: 28px;
+		content: ' ';
+		display: block;
+		background-repeat: no-repeat;
+		background-image: url('/check.svg');
+	}
+	.radio-item2 input[type='checkbox']:checked + label:nth-child(odd):after {
+		left: 30px;
+		position: absolute;
+	}
+
+	.radio-item3 {
+		display: flex;
+		align-items: baseline;
+		position: relative;
+		padding: 32px 6px;
+		width: 25%;
+	}
+
+	.radio-item3 input[type='checkbox'] {
+		display: none;
+	}
+
+	.radio-item3 label {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	.radio-item3 label:before {
+		content: ' ';
+		display: inline-block;
+		position: relative;
+		top: 5px;
+		margin: 0 5px 0 0;
+		width: 20px;
+		height: 20px;
+		background: #FFFFFF;
+		border: 1px solid #5e727a;
+		background-color: white;
+	}
+
+	.radio-item3 input[type='checkbox']:checked + label:after {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 40px;
+		left: 11px;
+		content: ' ';
+		display: block;
+		background-repeat: no-repeat;
+		background-image: url('/check.svg');
+	}
+	.radio-item3 input[type='checkbox']:checked + label:after {
+		left: 11px;
 		position: absolute;
 	}
 </style>
