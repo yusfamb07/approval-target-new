@@ -29,35 +29,19 @@
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-body">
-				<div class="d-flex bd-highlight mb-3">
-					<div class="p-2 flex-grow-1 bd-highlight">
-						<h5 style="color: #BAE2F3">Incoming Mail</h5>
-					</div>
+				<div class="d-flex justify-content-between mb-4">
+					<h5 style="color: #BAE2F3">Outgoing Mail</h5>
 
-					<div class="p-2 bd-highlight">
-						<button
-							type="button"
-							class="btn btn-secondary add-new"
-							data-bs-toggle="modal"
-							data-bs-target="#FormModal"
-						>
-							<img src="/filter-letter.svg" alt="" />
-							Filter Letter</button
-						>
-					</div>
-					<div class="p-2 bd-highlight">
-						<button
-							type="button"
-							class="btn btn-secondary add-new"
-							data-bs-toggle="modal"
-							data-bs-target="#FormModal"
-						>
-							<img src="/add.svg" alt="" />
-							New Letter</button
-						>
-					</div>
+					<button
+						type="button"
+						class="btn btn-secondary add-new"
+						data-bs-toggle="modal"
+						data-bs-target="#FormModal"
+					>
+						<img src="/add.svg" alt="" />
+						New Letter</button
+					>
 				</div>
-
 				<table id="incomingmail" class="table mb-3 mt-3" style="width:100%">
 					<thead>
 						<tr>
@@ -166,7 +150,7 @@
 								<ul class="nav nav-pills justify-content-start">
 									<li class="nav-item">
 										<a class="nav-link active" data-bs-toggle="pill" href="#callin"
-											>Incoming Mail Form</a
+											>Outgoing Mail Form</a
 										>
 									</li>
 									<li class="nav-item">
@@ -184,7 +168,7 @@
 								<div class="tab-pane active" id="callin" style="color: white;">
 									<div class="mt-3">
 										<div class="d-flex align-items-center gap-1 text-white">
-											<span style="width: 30%;">Incoming Mail Form</span>
+											<span style="width: 30%;">Outgoing Mail Form</span>
 											<hr style="border-top: 1px solid white; width: 100%" />
 										</div>
 
