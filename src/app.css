@@ -209,7 +209,10 @@ div.alphabetInfo {
 
 .detail {
 	background-color: #3d454b;
-	border: #4c5056;
+}
+
+.detail li {
+	border: 1px solid #4c5056;
 }
 
 /* .navbar .has-megamenu:hover {
@@ -335,13 +338,18 @@ div.alphabetInfo {
 	border-radius: 0;
 }
 
+.form-control:disabled {
+	background-color: #242b2d;
+	border: 1px solid #5e727a;
+}
+
 .modal-form {
 	background-color: #363d44;
-	border: 0px;
 	/* border: #21262b; */
 	/* border: 1px solid #fbfdff; */
 	color: #fbfdff;
 	border-radius: 0% !important;
+	border: 1px solid #5e727a;
 }
 
 .modal-form-upload {
@@ -368,7 +376,7 @@ textarea {
 }
 
 .modal-form::placeholder {
-	color: #fbfdff;
+	color: #8a9fa6;
 	font-size: 14px;
 	font-family: myFirstFont;
 }

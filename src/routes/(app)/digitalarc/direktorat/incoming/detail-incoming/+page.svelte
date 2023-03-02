@@ -5,7 +5,7 @@
 <div class="container mt-3">
 	<div class="col-md-12">
 		<div class="route">
-			<span>Incoming Mail</span> > <span>Detail Letter</span>
+			<span style="color: #BAE2F3;">Incoming Mail</span> > <span style="color: #BAE2F3;">Detail Letter</span>
 		</div>
 		<div class="card">
 			<div class="card-body">
@@ -339,6 +339,7 @@
 <style>
 	.route {
 		display: flex;
+		align-items: baseline;
 		gap: 32px;
 		color: #bae2f3;
 		padding: 24px 0;
