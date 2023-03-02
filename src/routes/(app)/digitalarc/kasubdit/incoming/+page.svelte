@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import Navbar from '../../../../../compenents/Navbar.svelte';
 	// import Select from '../../../../../compenents/Select.svelte';
-
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	const options = {};
 	onMount(async () => {
 		new DataTable('#incomingmail', {
@@ -15,8 +15,6 @@
 	export let data;
 	const { posts } = data;
 </script>
-
-<Navbar />
 
 <div class="container mt-3">
 	<div class="col-md-12">
@@ -60,11 +58,15 @@
 								<td>{post.file}</td>
 								<td><a href="">{post.status}</a></td>
 								<td><a href="">{post.disposition}</a></td>
-								<td
-									><span
+								<td>
+									<!-- svelte-ignore a11y-click-events-have-key-events -->
+									<span
 										class="detail-container"
 										data-bs-toggle="modal"
 										data-bs-target="#DetailModal1"
+										on:click={() => {
+											goto($page.url.pathname + '/detail_letter');
+										}}
 										><img src="/icon_action.svg" alt="icon detail" />
 										<p>Action</p></span
 									></td

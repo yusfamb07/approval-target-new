@@ -1,3 +1,8 @@
+<script>
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+</script>
+
 <main>
 	<div class="title_container">
 		<p>
@@ -259,9 +264,13 @@
 				</div>
 			</div>
 		</div>
-		<button class="back"
-			><img src="/left_arrows.svg" alt="left_arrow" style="margin-right: 1rem;" /> Back to Incoming Mail
-			List</button
+		<button
+			class="back"
+			on:click={() => {
+				history.back();
+			}}
+			><img src="/left_arrows.svg" alt="left_arrowlikn=" style="margin-right: 1rem;" /> Back to Incoming
+			Mail List</button
 		>
 	</div>
 </main>
@@ -545,12 +554,12 @@
 	} */
 	/* disposition sheet */
 	.back {
+		background-color: #2f383b;
 		color: #fbfdff;
-		background: #2f383b;
-		border: 1px solid #5e727a;
 		max-width: 216px;
 		margin-top: 54px;
 		padding: 4px 8px;
+		border: 1px solid #5e727a;
 	}
 	.retro_container,
 	.note_container,

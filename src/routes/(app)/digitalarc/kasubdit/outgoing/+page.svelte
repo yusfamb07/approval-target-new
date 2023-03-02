@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import Navbar from '../../../../../compenents/Navbar.svelte';
 	// import Select from '../../../../../compenents/Select.svelte';
 
 	const options = {};
@@ -16,14 +15,12 @@
 	const { posts } = data;
 </script>
 
-<Navbar />
-
 <div class="container mt-3">
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-body">
 				<div class="d-flex justify-content-between mb-4">
-					<h5 style="color: #BAE2F3">Incoming Mail</h5>
+					<h5 style="color: #BAE2F3">Outgoing Mail</h5>
 
 					<button
 						type="button"
