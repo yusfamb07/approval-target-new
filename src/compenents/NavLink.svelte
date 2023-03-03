@@ -4,7 +4,7 @@
 
 	export let href;
 	export let title;
-	export let icon;
+	// export let icon;
 	// let currentPath;
 	// onMount(() => {
 	// 	currentPath = window.location.pathname;

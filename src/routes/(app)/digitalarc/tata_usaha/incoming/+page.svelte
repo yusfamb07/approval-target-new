@@ -12,7 +12,6 @@
 			ordering: true
 		});
 	});
-
 	let questions = [
 		{ id: 1, text: `Option 1` },
 		{ id: 2, text: `Option 2` },
