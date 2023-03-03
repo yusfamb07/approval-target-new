@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import Select from '../../../../../compenents/Select.svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 
 	const options = {};
 	onMount(async () => {
@@ -22,7 +24,6 @@
 	let answer = '';
 
 	export let data;
-	const { posts } = data;
 </script>
 
 <div class="container mt-3">
@@ -73,18 +74,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						{#each posts as post}
+						{#each data.summaries as { id, letter_no, letter_origin, date, regarding, file, status, disposition }}
 							<tr>
-								<td>{post.id}</td>
-								<td>{post.letter_no}</td>
-								<td>{post.letter_origin}</td>
-								<td>{post.date}</td>
-								<td>{post.regarding}</td>
-								<td>{post.file}</td>
-								<td><a href="">{post.status}</a></td>
+								<td>{id}</td>
+								<td>{letter_no}</td>
+								<td>{letter_origin}</td>
+								<td>{date}</td>
+								<td>{regarding}</td>
+								<td>{file}</td>
+								<td><a href="">{status}</a></td>
 								<td
 									><a href="#!" data-bs-toggle="modal" data-bs-target="#FormModalDetail"
-										>{post.disposition}</a
+										>{disposition}</a
 									></td
 								>
 								<td>
@@ -105,11 +106,18 @@
 											aria-labelledby="dropdownMenuLink"
 										>
 											<li class="p-1">
-												<a
+												<!-- svelte-ignore a11y-click-events-have-key-events -->
+												<!-- <a
 													class="d-flex align-items-center gap-2"
 													id="txt-link"
-													href="/digitalarc/tata_usaha/incoming/detail-incoming"
+													on:click={() => goto($page.url.pathname + `/detail-incoming/${post.id}`)}
 													><img class="iconnav" src="/detail.svg" alt="" /> Detail</a
+												> -->
+												<button
+													on:click={() => goto($page.url.pathname + `/detail-incoming/${id}`)}
+													class="d-flex align-items-center gap-2"
+													id="txt-link"
+													><img class="iconnav" src="/detail.svg" alt="" /> Detail</button
 												>
 											</li>
 

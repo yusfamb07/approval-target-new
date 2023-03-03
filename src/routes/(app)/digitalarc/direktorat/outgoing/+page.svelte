@@ -17,8 +17,6 @@
 	const { posts } = data;
 </script>
 
-<Navbar />
-
 <div class="container mt-3">
 	<div class="col-md-12">
 		<div class="card">

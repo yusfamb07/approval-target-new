@@ -5,15 +5,15 @@
 <div class="container mt-3">
 	<div class="col-md-12">
 		<div class="route">
-			<span>Incoming Mail</span> > <span>Detail Letter</span>
+			<span>Outgoing Mail</span> > <span>Detail Letter</span>
 		</div>
 		<div class="card">
 			<div class="card-body">
 				<div class="d-flex justify-content-between mb-4">
-					<h5 style="color: #BAE2F3">Incoming Mail Detail</h5>
+					<h5 style="color: #BAE2F3">Outgoing Mail Detail</h5>
 				</div>
 				<div class="d-flex align-items-center gap-1 text-white">
-					<span style="width: 15%;">Incoming Mail Detail</span>
+					<span style="width: 15%;">Outgoing Mail Detail</span>
 					<hr style="border-top: 1px solid white; width: 100%" />
 				</div>
 				<div class="row mt-3">
