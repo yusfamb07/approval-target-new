@@ -1,7 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	// import Select from '../../../../../compenents/Select.svelte';
-
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	const options = {};
 	onMount(async () => {
 		new DataTable('#incomingmail', {
@@ -57,8 +58,12 @@
 								<td>{post.file}</td>
 								<td><a href="">{post.status}</a></td>
 								<td><a href="">{post.disposition}</a></td>
-								<td
-									><span
+								<td>
+									<!-- svelte-ignore a11y-click-events-have-key-events -->
+									<span
+										on:click={() => {
+											goto($page.url.pathname + '/detail_letter');
+										}}
 										class="detail-container"
 										data-bs-toggle="modal"
 										data-bs-target="#DetailModal1"

@@ -65,7 +65,7 @@
 										data-bs-toggle="modal"
 										data-bs-target="#DetailModal1"
 										on:click={() => {
-											goto($page.url.pathname + '/detail_letter');
+											goto($page.url.pathname + `/${post.id}`);
 										}}
 										><img src="/icon_action.svg" alt="icon detail" />
 										<p>Action</p></span

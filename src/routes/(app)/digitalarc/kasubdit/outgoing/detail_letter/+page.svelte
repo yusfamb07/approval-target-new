@@ -1,7 +1,10 @@
+<script>
+</script>
+
 <main>
 	<div class="title_container">
 		<p>
-			<span style="margin-right: 31.5px">incoming Mail</span> >
+			<span style="margin-right: 31.5px">Outgoing Mail</span> >
 			<span style="margin-left: 31.5px">Detail Letter</span>
 		</p>
 	</div>

@@ -2,17 +2,23 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	export let data;
-	// const { posts } = data;
+	const { posts } = data;
+	// let { date, id, letter_no, file, letter_origin, status, regarding, disposition } = posts;
+	const id = $page.params.slug;
 	const datas = data.posts;
-	const post = datas.find((post) => post.id === 2);
-	console.log(post);
+
+	// console.log(id);
+	// console.log(data);
+	const post = datas.find((post) => post.id == id);
+	// console.log(post);
 </script>
 
 <main>
 	<div class="title_container">
 		<p>
 			<span style="margin-right: 31.5px">incoming Mail</span> >
-			<span style="margin-left: 31.5px">Detail Letter</span>
+			<span style="margin-left: 31.5px">Detail Letter</span> >
+			<span style="margin-left: 31.5px">{post.letter_no}</span>
 		</p>
 	</div>
 	<div class="card">
@@ -26,29 +32,29 @@
 				<ul>
 					<li>
 						<label for="letter_number">Letter Number</label>
-						<input type="text" placeholder="265 / DE-V / 1 / 2023" name="letter_number" disabled />
+						<input type="text" placeholder={post.letter_no} name="letter_number" disabled />
 					</li>
 					<li>
 						<label for="date">Date</label>
 						<div class="input_date">
 							<img src="/calendar.svg" alt="calendar_icon" />
-							<input type="text" placeholder="08/01/23" name="date" disabled />
+							<input type="text" placeholder={post.date} name="date" disabled />
 						</div>
 					</li>
 					<li>
 						<label for="letter_origin">Letter Origin</label>
-						<input type="text" placeholder="Deputi V" name="letter_origin" disabled />
+						<input type="text" placeholder={post.letter_origin} name="letter_origin" disabled />
 					</li>
 				</ul>
 			</div>
 			<div class="regard_container">
 				<label for="regard">Regarding</label>
-				<input type="text" placeholder="Pembelian PC untuk Operasional" name="regard" disabled />
+				<input type="text" placeholder={post.regarding} name="regard" disabled />
 			</div>
 			<div class="file_container">
 				<label for="file">File</label>
 				<div class="input_container">
-					<input type="text" placeholder="Nama-File.pdf" name="file" disabled />
+					<input type="text" placeholder={post.file} name="file" disabled />
 					<button><img src="/files.svg" alt="files_icon" /> Download File</button>
 				</div>
 			</div>

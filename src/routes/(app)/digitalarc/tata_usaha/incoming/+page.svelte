@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import Select from '../../../../../compenents/Select.svelte';
+	import { page } from '$app/stores';
 
 	const options = {};
 	onMount(async () => {
@@ -10,7 +11,6 @@
 			ordering: true
 		});
 	});
-
 	let questions = [
 		{ id: 1, text: `Option 1` },
 		{ id: 2, text: `Option 2` },
@@ -23,6 +23,7 @@
 
 	export let data;
 	const { posts } = data;
+	console.log(posts.id);
 </script>
 
 <div class="container mt-3">
