@@ -3,6 +3,16 @@
 	import icon from '../lib/dashboard.svg';
 	import { onMount } from 'svelte';
 
+	function logoutHandler() {
+		localStorage.clear();
+		goto('/login');
+	}
+
+	// onMount(async () => {
+	// 	fetchIncomingMail();
+	// 	if (!localStorage.getItem('token')) goto('/login');
+	// });
+
 	import { page } from '$app/stores';
 	$page.url.pathname;
 
@@ -267,7 +277,11 @@
 					</span>
 				</li>
 
-				<li class="nav-item"><img class="icon-item" src="/power.svg" alt="" /></li>
+				<li class="nav-item">
+					<!-- <a href={'/login'} on:click={logoutHandler}
+						><img class="icon-item" src="/power.svg" alt="" /></a
+					> -->
+				</li>
 			</ul>
 		</div>
 

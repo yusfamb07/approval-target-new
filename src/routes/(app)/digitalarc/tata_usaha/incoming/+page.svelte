@@ -3,15 +3,11 @@
 	import Select from '../../../../../compenents/Select.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import axios from 'axios';
+	// import { dataSuratIncoming } from '../../../../utils/data/dataSuratIncoming';
 
 	const options = {};
-	onMount(async () => {
-		new DataTable('#incomingmail', {
-			bLengthChange: false,
-			paging: true,
-			ordering: true
-		});
-	});
+
 	let questions = [
 		{ id: 1, text: `Option 1` },
 		{ id: 2, text: `Option 2` },
@@ -22,7 +18,32 @@
 
 	let answer = '';
 
-	export let data;
+	let IncomingMail = [];
+	async function fetchIncomingMail() {
+		try {
+			const res = await axios.get('http://17.1.16.57:3001/backend/api/incoming_mail/tata_usaha', {
+				headers: {
+					Authorization: `Bearer ${localStorage.getItem('token')}`,
+					'Access-Control-Allow-Origin': '*',
+					Accept: 'application/json',
+					'Content-Type': 'application/json'
+				}
+			});
+			console.log(res.data);
+			IncomingMail = res.data;
+		} catch (error) {
+			return error;
+		}
+	}
+
+	onMount(async () => {
+		await fetchIncomingMail();
+		new DataTable('#incomingmail', {
+			bLengthChange: false,
+			paging: true,
+			ordering: true
+		});
+	});
 </script>
 
 <div class="container mt-3">
@@ -68,25 +89,24 @@
 							<th>Regarding</th>
 							<th>File</th>
 							<th>Status</th>
-							<th>Disposition</th>
+							<th>Type</th>
+							<th>Origin Name</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						{#each data.summaries as { id, letter_no, letter_origin, date, regarding, file, status, disposition }}
+						{#each IncomingMail as post}
 							<tr>
-								<td>{id}</td>
-								<td>{letter_no}</td>
-								<td>{letter_origin}</td>
-								<td>{date}</td>
-								<td>{regarding}</td>
-								<td>{file}</td>
-								<td><a href="">{status}</a></td>
-								<td
-									><a href="#!" data-bs-toggle="modal" data-bs-target="#FormModalDetail"
-										>{disposition}</a
-									></td
-								>
+								<td>{post?.inmail_id}</td>
+								<td>{post?.inmail_letter_number}</td>
+								<td>{post?.inmail_title}</td>
+								<td>{post?.inmail_date}</td>
+								<td>{post?.inmail_regarding}</td>
+								<td>{post?.inmail_file}</td>
+								<td>{post?.inmail_status.status_name}</td>
+								<td>{post?.inmail_type?.type_name}</td>
+								<td>{post?.inmail_origin?.origin_name}</td>
+
 								<td>
 									<div class="dropdown ">
 										<button
@@ -106,17 +126,11 @@
 										>
 											<li class="p-1">
 												<!-- svelte-ignore a11y-click-events-have-key-events -->
-												<!-- <a
+												<a
 													class="d-flex align-items-center gap-2"
 													id="txt-link"
 													on:click={() => goto($page.url.pathname + `/detail-incoming/${post.id}`)}
 													><img class="iconnav" src="/detail.svg" alt="" /> Detail</a
-												> -->
-												<button
-													on:click={() => goto($page.url.pathname + `/detail-incoming/${id}`)}
-													class="d-flex align-items-center gap-2"
-													id="txt-link"
-													><img class="iconnav" src="/detail.svg" alt="" /> Detail</button
 												>
 											</li>
 

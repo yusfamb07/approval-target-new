@@ -16,6 +16,28 @@
 
 	let selected = [];
 
+	let formData = {};
+	let fileInput;
+
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+
+		const formDataWithFile = new FormData();
+		formDataWithFile.append('file', fileInput.files[0]);
+		formDataWithFile.append('data', JSON.stringify(formData));
+
+		const response = await fetch('https://dummyjson.com/products/add', {
+			method: 'POST',
+			body: formDataWithFile
+		});
+
+		if (response.ok) {
+			const data = await response.json();
+			debugger;
+			console.log(data);
+		}
+	};
+
 	onMount(async () => {
 		new DataTable('#lawfulllist');
 	});
@@ -34,7 +56,7 @@
 								type="button"
 								class="btn btn-secondary add-new"
 								data-bs-toggle="modal"
-								data-bs-target="#FormModal"
+								data-bs-target="#FormModalDummy"
 							>
 								<img src="/add.svg" alt="" />
 								Permintaan Baru</button
@@ -51,6 +73,7 @@
 								<th>Merk</th>
 								<th>Kategori</th>
 								<th>Harga</th>
+								<th>Foto</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -62,7 +85,7 @@
 									<td>{product.brand}</td>
 									<td>{product.category}</td>
 									<td>${product.price}</td>
-									<!-- <td> <img src={product.images} style="width :100px;" alt="" /></td> -->
+									<td> <img src={product.thumbnail} style="width :100px;" alt="" /></td>
 								</tr>
 							{/each}
 						</tbody>
@@ -249,6 +272,117 @@
 						data-bs-toggle="modal"
 						data-bs-target="#FeedbackModal">Kirim Permohonan</button
 					>
+					<button type="button" class="btn btn-secondary submit-btn" data-bs-dismiss="modal"
+						>Batalkan</button
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="modal fade"
+		id="FormModalDummy"
+		tabindex="-1"
+		aria-labelledby="exampleModalLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Lawful Interception Form Request</h5>
+					<button
+						type="button"
+						class="btn-close btn-close-white"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					/>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<form on:submit={handleSubmit}>
+							<div class="col-md-12">
+								<p>Judul</p>
+								<div class="input-group mb-3">
+									<input
+										type="text"
+										class="form-control modal-form"
+										id="title"
+										bind:value={formData.title}
+										aria-describedby="basic-addon3"
+										required
+									/>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<p>Deskripsi</p>
+								<textarea
+									class="form-control mb-3 modal-form"
+									id="description"
+									bind:value={formData.description}
+									rows="3"
+									required
+								/>
+							</div>
+
+							<div class="col-md-12">
+								<p>Merk</p>
+								<div class="input-group mb-3">
+									<input
+										type="text"
+										class="form-control modal-form"
+										id="brand"
+										bind:value={formData.brand}
+										aria-describedby="basic-addon3"
+										required
+									/>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<p>Kategori</p>
+								<div class="input-group mb-3">
+									<input
+										type="text"
+										class="form-control modal-form"
+										id="category"
+										bind:value={formData.category}
+										aria-describedby="basic-addon3"
+										required
+									/>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<p>Harga</p>
+								<div class="input-group mb-3">
+									<input
+										type="text"
+										class="form-control modal-form"
+										id="price"
+										bind:value={formData.price}
+										aria-describedby="basic-addon3"
+										required
+									/>
+								</div>
+							</div>
+
+							<div class="col-md-12 mb-3">
+								<p>Upload File</p>
+								<input
+									class="form-control mb-3 modal-form-upload"
+									type="file"
+									id="thumbnail"
+									bind:this={fileInput}
+									required
+								/>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-secondary submit-btn">Kirim Permohonan</button>
 					<button type="button" class="btn btn-secondary submit-btn" data-bs-dismiss="modal"
 						>Batalkan</button
 					>
